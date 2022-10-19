@@ -30,7 +30,7 @@ export default function Home() {
 			</Head>
 
 			<main>
-				<h1>stylish Shop</h1>
+				<h1>New Arrivals</h1>
 				<Gallery>
 					{products.map((product) => (
 						<Product

@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export const DetailStyle = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5em;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5em;
+	margin: 0rem 10%;
 `
 
 export const ProductInfo = styled.div`
