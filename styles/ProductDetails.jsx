@@ -8,7 +8,7 @@ export const DetailStyle = styled.div`
 `
 
 export const ProductInfo = styled.div`
-	width: 50%;
+	width: 45%;
 
     button {
         font-size: 1.5rem;
@@ -20,28 +20,33 @@ export const ProductInfo = styled.div`
 
 export const Quantity = styled.div`
 	display: flex;
-    align-items: center;
-    margin: 1em 0em;
+	align-items: center;
+	margin: 1em 0em;
 
-    button {
-        background: trasparent;
-        border: none;
-        display: flex;
-        font-size: 1.5rem;
-    }
+	button {
+		background-color: transparent;
+		background-repeat: no-repeat;
+		border: none;
+		display: flex;
+		font-size: 1.2rem;
+		padding:  0em 0.5rem;
+		overflow: hidden;
+		outline: none;
+        cursor: pointer;
+	}
 
-    p {
-        width: 1rem;
-        text-align: center;
-    }
+	p {
+		width: 1rem;
+		text-align: center;
+	}
 
-    span {
-        color: var(--secondary);
-    }
+	span {
+		color: var(--secondary);
+	}
 
-    svg {
-        color: #494949;
-    }
+	svg {
+		color: #494949;
+	}
 `
 
 export const Buy = styled.button`
