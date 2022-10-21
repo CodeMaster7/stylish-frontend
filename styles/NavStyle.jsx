@@ -26,5 +26,23 @@ export const NavStyle = styled.nav`
 
     svg {
         cursor: pointer;
+        font-size: 1.7rem;
+    }
+
+    span {
+        background: #ff2626;
+        color: #fff;
+        width: 1.3rem;
+        height: 1.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-bottom: 0.1em;
+        font-size: 0.75rem;
+        position: absolute;
+        top: -20%;
+        right: -15%;
+        pointer-events: none;
     }
 `

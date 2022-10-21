@@ -14,6 +14,7 @@ export const ProductInfo = styled.div`
         font-size: 1.5rem;
         font-weight: medium;
         padding: 0.5em 1em;
+        border: none;
         cursor: pointer;
     }
 `

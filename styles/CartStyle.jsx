@@ -67,3 +67,19 @@ export const EmptyStyle = styled.div`
 		color: var(--secondary);
 	}
 `
+
+export const Checkout = styled.div`
+    width: 90%;
+    margin: 0 auto;
+	button {
+		background: var(--primary);
+		padding: 0.5em 1em;
+		margin: 1em 0em;
+		width: 100%;
+		color: white;
+		font-size: 1.5rem;
+		font-weight: medium;
+        border: none;
+		cursor: pointer;
+	}
+`
