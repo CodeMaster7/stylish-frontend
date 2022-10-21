@@ -54,7 +54,12 @@ export default function ProductDetails() {
 							<AiFillPlusCircle onClick={increaseQty} />
 						</button>
 					</Quantity>
-					<Buy onClick={() => onAdd(data.products.data[0].attributes, qty)}>Add to cart</Buy>
+					<Buy
+						onClick={() =>
+							onAdd(data.products.data[0].attributes, qty)
+						}>
+						Add to cart
+					</Buy>
 				</ProductInfo>
 			</DetailStyle>
 		</>
