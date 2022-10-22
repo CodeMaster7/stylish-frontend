@@ -11,6 +11,7 @@ import {
 import { Quantity } from '../styles/ProductDetails'
 import { FaShoppingCart } from 'react-icons/fa'
 import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai'
+import getStripe from '../lib/getStripe'
 
 // Animation Variants
 const card = {
@@ -29,13 +30,21 @@ const cards = {
 }
 
 export default function Cart() {
-	const {
-            cartItems,
-            setShowCart,
-            onAdd,
-            onRemove,
-            totalPrice
-        } = useStateContext()
+	const { cartItems, setShowCart, onAdd, onRemove, totalPrice } = useStateContext()
+
+	//Payment
+	const handleCheckout = async () => {
+		const stripePromise = await getStripe()
+		const response = await fetch('/api/stripe', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(cartItems)
+		})
+		const data = await response.json()
+		await stripePromise.redirectToCheckout({ sessionId: data.id })
+	}
 
 	return (
 		<CartWrapper
@@ -63,7 +72,7 @@ export default function Cart() {
 					variants={cards}
 					initial='hidden'
 					animate='show'
-                    layout>
+					layout>
 					{cartItems.length >= 1 &&
 						cartItems.map((item) => {
 							return (
@@ -102,8 +111,8 @@ export default function Cart() {
 				</Cards>
 				{cartItems.length >= 1 && (
 					<Checkout layout>
-						<h3>Subtotal: ${totalPrice}</h3>
-						<button>Purchase</button>
+						<h3>Subtotal: ${totalPrice.toFixed(2)}</h3>
+						<button onClick={handleCheckout}>Purchase</button>
 					</Checkout>
 				)}
 			</CartStyle>
