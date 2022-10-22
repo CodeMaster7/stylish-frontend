@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { ProductStyle } from '../styles/ProductStyle'
 import Link from 'next/link'
 
