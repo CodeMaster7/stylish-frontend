@@ -26,7 +26,7 @@ export const NavStyle = styled.nav`
 
     svg {
         cursor: pointer;
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
     span {

@@ -3,6 +3,7 @@ import { FiShoppingBag } from 'react-icons/fi'
 import { HeaderStyle, NavStyle } from '../styles/NavStyle'
 import Cart from './Cart'
 import { useStateContext } from '../lib/context'
+import User from './User'
 
 const { AnimatePresence, motion } = require('framer-motion')
 
@@ -16,6 +17,7 @@ export default function Nav() {
 					<a>Styled.</a>
 				</Link>
 				<NavStyle>
+                    <User />
 					<div onClick={() => setShowCart(true)}>
 						{totalQuantities > 0 && (
 							<motion.span
