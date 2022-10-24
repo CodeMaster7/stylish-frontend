@@ -7,8 +7,6 @@ export default function User() {
 	const route = useRouter()
 	const { user, error, isLoading } = useUser()
 
-	console.log('🚀 ~ user', user)
-
 	if (!user)
 		return (
 			<div onClick={() => route.push(`/api/auth/login`)}>
