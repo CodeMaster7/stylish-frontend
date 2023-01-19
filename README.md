@@ -50,4 +50,4 @@ Full Stack e-commerce application with the following features:
 - Framer Motion for animation
 - React Hot Toast for pop up notifications
 
-* [Production available in this Vercel link](https://stylissh-frontend.vercel.app/)
+* [Production available in this Vercel link](https://stylish-frontend.vercel.app)
